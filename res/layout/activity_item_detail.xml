@@ -1,0 +1,69 @@
+<ScrollView  android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+<LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".ItemDetailActivity" 
+    android:orientation="horizontal">
+    
+    <ImageView
+        android:id="@+id/itemImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/item_image"
+        android:layout_marginTop="30dp" />
+    
+	 <LinearLayout android:orientation="vertical" 
+	    	android:layout_width="fill_parent" 
+	    	android:layout_height="wrap_content">
+	    <TextView
+		        android:id="@+id/lblItemName"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content" 
+		        android:textIsSelectable="true"/>
+	    <TextView
+		        android:id="@+id/lblItemShortDesc"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content" 
+		        android:textIsSelectable="true"/>
+	    <TextView
+		        android:id="@+id/lblItemLongDesc"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content" 
+		        android:textIsSelectable="true"/>
+	    <TextView
+		        android:id="@+id/lblItemSku"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content" 
+		        android:textIsSelectable="true"/>
+	    <TextView
+		        android:id="@+id/lblItemPrice"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content" 
+		        android:textIsSelectable="true"/>
+	    <TextView
+		        android:id="@+id/lblItemInstoreAvail"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content" 
+		        android:textIsSelectable="true"/>
+	    
+	    <View android:layout_width="match_parent"
+  				android:layout_height="30dp"
+  				android:layout_weight="1">
+		</View>
+	    
+	     <TableLayout android:id = "@+id/tableLayout" 
+				android:layout_width = "wrap_content" 
+				android:layout_height = "wrap_content"   
+				android:stretchColumns = "*" >
+   		
+		</TableLayout>
+    </LinearLayout>  
+</LinearLayout>
+ </ScrollView>

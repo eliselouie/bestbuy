@@ -1,0 +1,52 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".ProductDetailActivity" 
+    android:orientation="horizontal">
+    
+    <ImageView
+        android:id="@+id/productImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp" 
+        android:contentDescription="@string/item_image" />
+	 <LinearLayout android:orientation="vertical" 
+	    	android:layout_width="fill_parent" 
+	    	android:layout_height="wrap_content">
+	    <TextView
+		        android:id="@+id/lblProductName"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:textIsSelectable="true" />
+	    <TextView
+		        android:id="@+id/lblProductShortDesc"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:textIsSelectable="true" />
+	    <TextView
+		        android:id="@+id/lblProductLongDesc"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:textIsSelectable="true" />
+	    <TextView
+		        android:id="@+id/lblProductSku"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:textIsSelectable="true" />
+	    <TextView
+		        android:id="@+id/lblProductPrice"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:textIsSelectable="true" />
+	    <TextView
+		        android:id="@+id/lblProductInstoreAvail"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content" 
+		        android:textIsSelectable="true"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.djsystems.bestbuy"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="17" />
+	<uses-permission android:name="android.permission.INTERNET"></uses-permission>
+	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+	<uses-permission android:name="android.permission.WAKE_LOCK"/>
+	<uses-permission android:name="android.permission.VIBRATE"/>
+    <application
+        android:icon="@drawable/bestbuy"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" 
+        android:name="BestbuyApp"
+        android:allowBackup="true">
+        <activity
+            android:name="com.djsystems.bestbuy.ui.MainActivity"
+            android:label="@string/app_name" 
+            android:configChanges="orientation|keyboardHidden|screenSize" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.djsystems.bestbuy.ui.ProductDetailActivity"
+            android:label="@string/title_activity_product_detail" >
+        </activity>
+        <activity
+            android:name="com.djsystems.bestbuy.ui.NotificationDetails"
+            android:label="@string/title_activity_notification_detail" >
+        </activity>
+        <activity
+            android:name="com.djsystems.bestbuy.ui.ItemDetailActivity"
+            android:label="@string/title_activity_item_detail" 
+            android:configChanges="orientation|keyboardHidden|screenSize" >
+        </activity>
+        <service android:name=".services.AddToWatchListService"/>
+        <service android:name=".services.DeleteFromWatchListService"/>
+        <service android:name=".services.QueryItemService"
+            android:process=":bestbuy_background"
+            android:icon="@drawable/icon" android:label="@string/service_name"/>
+        <receiver android:name=".services.QueryItemStartupReceiver" >
+			<intent-filter>
+	        	<action android:name="android.intent.action.BOOT_COMPLETED"/>
+	        	<action android:name="org.hualang.broadcast.action.MY_ACTION"/> 
+	       	</intent-filter>
+		</receiver>
+		<receiver android:name=".services.AlarmReceiver" />
+    </application>
+	
+</manifest>
